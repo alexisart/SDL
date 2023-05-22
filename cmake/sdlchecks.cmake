@@ -665,7 +665,7 @@ macro(CheckWayland)
         message(FATAL "Failed to get wayland-scanner version")
         set(WAYLAND_FOUND FALSE)
       endif()
-      string(REPLACE "wayland-scanner " "" WAYLAND_SCANNER_VERSION ${WAYLAND_SCANNER_VERSION})
+      string(REPLACE "wayland-scanner " "" WAYLAND_SCANNER_VERSION "${WAYLAND_SCANNER_VERSION}")
 
       string(COMPARE LESS ${WAYLAND_SCANNER_VERSION} "1.15.0" WAYLAND_SCANNER_PRE_1_15)
       if(WAYLAND_SCANNER_PRE_1_15)
